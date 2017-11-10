@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lstop.pojo">
+	<class name="Contact" table="contact">
+		<id name="contact_id" column="contact_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="contact_name"></property>
+		<property name="contact_gender"></property>
+		<property name="contact_phone"></property>
+		<property name="contact_mobile"></property>
+		<property name="contact_email"></property>
+		<property name="contact_qq"></property>
+		<property name="contact_position"></property>
+		<property name="contact_memo"></property>
+		<many-to-one name="customer" class="Customer" column="contact_cust_id"></many-to-one>
+	</class>
+</hibernate-mapping>
